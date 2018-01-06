@@ -5,7 +5,7 @@ class AutoResponsiveImage
 {
     public static $config = array(
         "quality" => 100,
-        "sizes" => array(100, 60, 30),
+        "sizes" => array(100, 75, 50, 25),
         "target_folder" => "auto-resizes",
     );
     // Return array of images with sizes 
@@ -30,7 +30,7 @@ class AutoResponsiveImage
         {
             $size_array[] = ($maxwidth*$size)/100;
         }
-        $size_array[] = ($maxwidth*2);
+        $size_array[] = ($maxwidth*1.5);
         
         // resized files already exist
         if( is_dir($public_root.$new_folder_path) && (filemtime($img_path) <  filemtime($public_root.$new_folder_path) ) ) 
@@ -48,9 +48,8 @@ class AutoResponsiveImage
                 if( is_dir($public_root.$new_folder_path))touch($public_root.$new_folder_path);
                 $new_folder = $new_folder_path.'/'.$size;
                 $abs_file = $public_root.$new_folder.'/'.$image_name;
-                //var_dump($public_root.$new_folder);die();
+                
                 if( !is_dir($public_root.$new_folder) ) {
-                    //var_dump($public_root.$new_folder);die();
                     mkdir($public_root.$new_folder,0755,true);
                 } 
 
@@ -66,7 +65,7 @@ class AutoResponsiveImage
     public static function render( $image, $maxwidth, $alt = null )
     {
         $images = AutoResponsiveImage::resize($image, $maxwidth);
-        //var_dump($images);die();
+
         $result = "<img ";
         if( is_array($images) && count($images)>0 )
         {
@@ -84,6 +83,7 @@ class AutoResponsiveImage
             $result .= "alt=\"".$alt."\" ";
         }
         $result .= "/>";
+
         return $result;
     }
 }
