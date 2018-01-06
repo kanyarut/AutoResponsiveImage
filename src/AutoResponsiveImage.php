@@ -26,11 +26,11 @@ class AutoResponsiveImage
         // create size for 2x image
         // var_dump($sizes);die();
 
+        $size_array[] = ($maxwidth*1.5);
         foreach( $sizes as $size ) 
         {
             $size_array[] = ($maxwidth*$size)/100;
         }
-        $size_array[] = ($maxwidth*1.5);
         
         // resized files already exist
         if( is_dir($public_root.$new_folder_path) && (filemtime($img_path) <  filemtime($public_root.$new_folder_path) ) ) 
@@ -76,7 +76,7 @@ class AutoResponsiveImage
             }
             
             $result .= "srcset=\"".implode(",",$result_images)."\" ";
-            $result .= "src=\"".$images[0]['file']."\" ";
+            $result .= "src=\"".$images[1]['file']."\" ";
         }
         if( $alt )
         {
