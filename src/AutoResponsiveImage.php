@@ -42,6 +42,7 @@ class AutoResponsiveImage
             }
         } else {
             $imagick = new \Imagick(realpath($img_path));
+            $imagick->setImageCompressionQuality(80);
             $img_width = $imagick->getImageWidth();
             foreach( $size_array as $size)
             {
@@ -57,6 +58,7 @@ class AutoResponsiveImage
                 $imagick->writeImage( $abs_file );
                 $result[] = array('size' => $size, 'file' => $new_folder.'/'.$image_name);
             }  
+            $imagick->destroy();
         }
         return $result;
     }
