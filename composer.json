@@ -1,0 +1,13 @@
+{
+    "name": "nblue/auto-responsive-image",
+    "description": "Server side solution for responsive image.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Kanyarut R.",
+            "email": "kanyarut.nice@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
