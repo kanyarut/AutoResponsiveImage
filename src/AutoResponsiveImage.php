@@ -3,7 +3,7 @@ namespace AutoResponsiveImage;
 
 class AutoResponsiveImage
 {
-    $config = array(
+    private $config = array(
         "quality": 100,
         "sizes": array(100, 60, 30),
         "public_root": "",
