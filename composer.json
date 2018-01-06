@@ -2,6 +2,7 @@
     "name": "nblue/auto-responsive-image",
     "description": "Server side solution for responsive image.",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Kanyarut R.",
@@ -9,5 +10,10 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-0": {
+            "AutoResponsiveImage\\": "src/"
+        }
+    }
 }
