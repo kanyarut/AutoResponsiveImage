@@ -1,4 +1,4 @@
 <?php
-function responsive_image(){
-    var_dump('helper');
+function responsive_image( $image, $maxwidth, $alt = null ){
+    return \AutoResponsiveImage\AutoResponsiveImage::render($image, $maxwidth, $alt);
 }

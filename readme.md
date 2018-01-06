@@ -20,3 +20,5 @@ For Laravel, you can create an alias in app/config/app.php for it:
 
 <a name="usage"></a>
 ## Usage
+
+echo responsive_image( string $image, (integer) $maxsize  )
