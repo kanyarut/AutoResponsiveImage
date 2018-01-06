@@ -12,8 +12,8 @@
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
-        "psr-0": {
-            "AutoResponsiveImage\\": "src/"
+        "psr-4": {
+            "AutoResponsiveImage\\": "src"
         }
     }
 }
