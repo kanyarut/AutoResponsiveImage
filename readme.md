@@ -16,7 +16,7 @@ Server side solution for responsive image
 
 For Laravel, you can create an alias in app/config/app.php for it:
 
-'AutoResponsiveImage' => 'nblue\AutoResponsiveImage\AutoResponsiveImage'
+'AutoResponsiveImage' => 'kanyarut\AutoResponsiveImage\AutoResponsiveImage'
 
 <a name="usage"></a>
 ## Usage
